@@ -7,36 +7,29 @@ defmodule InterfacedServer do
   use GenServer
 
   def init(_) do
-    # Using a list to collect tasks.
-    {:ok, []}
+    raise "TODO: Implement me!"
   end
 
   def trigger_task(server, tasks) when is_list(tasks) do
-    # Using primitive function.
-    Enum.each(tasks, fn task ->
-      trigger_task(server, task)
-    end)
+    raise "TODO: Implement me!"
   end
 
   def trigger_task(server, task) when is_binary(task) do
-    GenServer.cast(server, {:task, task})
+    raise "TODO: Implement me!"
   end
 
   def stats(server) do
-    {length, last} = GenServer.call(server, :stats)
-    # Returning a keyword list to provide extendable public interface.
-    [length: length, last: last]
+    raise "TODO: Implement me!"
   end
 
   # --- Internal Message Passing stuff ---
 
-  def handle_cast({:task, task}, tasks) do
-    {:noreply, [task|tasks]}
+  def handle_cast(_, _) do
+    raise "TODO: Implement me!"
   end
 
-  def handle_call(:stats, _from, [h|_] = tasks) do
-    # Using a tuple here as internal implementation.
-    {:reply, {length(tasks), h}, tasks}
+  def handle_call(_, _, _) do
+    raise "TODO: Implement me!"
   end
 
 end

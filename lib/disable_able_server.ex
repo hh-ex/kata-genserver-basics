@@ -6,16 +6,8 @@ defmodule DisableAbleServer do
 
   use GenServer
 
-  def init([enabled: true]) do
-    {:ok, nil}
-  end
-
-  def init([enabled: false]) do
-    :ignore
-  end
-
-  def init([timeout: true]) do
-    :timer.sleep(100)
+  def init(_) do
+    raise "TODO: Implement me!"
   end
 
 end

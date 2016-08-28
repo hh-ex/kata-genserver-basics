@@ -17,27 +17,25 @@ defmodule SimpleServer do
 
   # Constructor for this server.
   def start_link(given_value, opts \\ []) do
-    # Put module name under :name in case it is not set yet.
-    opts = Keyword.put_new(opts, :name, __MODULE__)
-    GenServer.start_link(__MODULE__, given_value, opts)
+    raise "TODO: Implement me!"
   end
 
-  def init(given_value) do
-    {:ok, given_value}
+  def init(_) do
+    raise "TODO: Implement me!"
   end
 
-  def get(server \\ __MODULE__) do
-    GenServer.call(server, :get)
+  def get(_) do
+    raise "TODO: Implement me!"
   end
 
-  def stop(server \\ __MODULE__) do
-    GenServer.stop(server)
+  def stop(_) do
+    raise "TODO: Implement me!"
   end
 
   # --- Internal Message Passing stuff ---
 
-  def handle_call(:get, _from, state) do
-    {:reply, state, state}
+  def handle_call(_, _, _) do
+    raise "TODO: Implement me!"
   end
 
 end
